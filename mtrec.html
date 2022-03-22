@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MIR4 Token Rotation Earning Calculator">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="mtrec.css">
+  <script src="mtrec.js"></script>
+  <title>MTREC</title>
+</head>
+
+<body>
+  <div class="header">
+    <h1>MIR4 Token Rotation Earnings Calculator</h1>
+  </div>
+  <section class="leftside">
+    <table>
+      <caption>DRACO|Septaria to DRACO</caption>
+      <tr>
+        <th>Septaria at hand</th>
+        <td><input type="number" value="0" id="septaria_available" required></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <caption>Draco|Septaria to Hydra Smelting </caption>
+      <tr>
+        <th>DRACO</th>
+        <td><input type="number" value="0" id="req_draco" required></td>
+      </tr>
+      <tr>
+        <th>Sepataria</th>
+        <td><input type="number" value="0" id="req_septaria" required></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <caption>Draco/Hydra Market Prices (in wemix credits) </caption>
+      <tr>
+        <th>Draco||Wemix</th>
+        <td><input type="number" value="0.0000" id="market_draco" required></td>
+      </tr>
+      <tr>
+        <th>Hydra|Wemix</th>
+        <td><input type="number" value="0.0000" id="market_hydra" required></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <th>Wemix Credits Market Price (PHP)</th>
+        <td><input type="number" value="0.00" id="market_wemix" required></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <tr>
+        <th>Wemix Credits Required</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.0000" id="req_wemix" readonly></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <caption>Sale of Hydra to Wemix </caption>
+      <tr>
+        <th>Sales</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.0000" id="sales" readonly></td>
+      </tr>
+      <tr>
+        <th>Cost of Sales (a+b)</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.0000" id="cost_sales" readonly></td>
+      </tr>
+      <tr>
+        <th>(a) Purchases:</th>
+      </tr>
+      <tr>
+        <th class="indent">DRACO</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.0000" id="purchases_draco" readonly></td>
+      </tr>
+      <tr>
+        <th>(b) Other Fees:</th>
+      </tr>
+      <tr>
+        <th class="indent">Txn Fee:Sale of Hydra</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.0000" id="txnfee" readonly></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <caption>Single Sale Profit/Loss</caption>
+      <tr>
+        <th>Profit/Loss on Sale</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.0000" readonly id="pnl_single_wemix"></td>
+      </tr>
+      <tr>
+        <th>Equivalent Draco</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0" readonly id="pnl_single_draco"></td>
+      </tr>
+      <tr>
+        <th>Equivalent PHP</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.00" readonly id="pnl_single_pesos"></td>
+      </tr>
+    </table>
+    <hr>
+    <table>
+      <caption>Multiple Sale Profit/Loss</caption>
+      <tr>
+        <th>Profit/Loss on Sale</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.0000" readonly id="pnl_multi_wemix"></td>
+      </tr>
+      <tr>
+        <th>Equivalent Draco</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0" readonly id="pnl_multi_draco"></td>
+      </tr>
+      <tr>
+        <th>Equivalent PHP</th>
+        <td><input class="readonly" disabled tabindex="-1" type="number" value="0.00" readonly id="pnl_multi_pesos"></td>
+      </tr>
+    </table>
+    <div class="button_container">
+      <button type="button" onclick="callAll()">Calculate</button>
+    </div>
+  </section>
+  <section class="rightside">
+    <div>
+      <iframe src="https://mir4draco.com/price" name="iframe"></iframe>
+    </div>
+    <div>
+      <button type="button"><a href="https://mir4draco.com/price" target="iframe">MIR4 DRACO & HYDRA PRICE</a> </button>
+      <button type="button"><a href="https://www.coingecko.com/en/coins/wemix-token/php" target="_blank">WEMIX Token
+          PRICE via COINGECKO</a> </button>
+    </div>
+  </section>
+  <script src="mtrec.js"></script>
+</body>
+
+</html>
