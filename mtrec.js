@@ -16,6 +16,11 @@ function callAll() {
   console.log('req_wemix= '.concat(req_wemix));
   document.getElementById('req_wemix').value = req_wemix.toFixed(4);
 
+  //=====| get php value of wemix required |=====//
+  var market_wemix = parseFloat(document.getElementById('market_wemix').value);
+  var req_wemix_php = req_wemix * market_wemix;
+  console.log('req_wemix_php= '.concat(req_wemix_php));
+  document.getElementById('req_wemix_php').value = req_wemix_php.toFixed(2);
 
   //======| get the sales amount |======//
   var market_hydra = document.getElementById('market_hydra').value;
@@ -56,7 +61,6 @@ function callAll() {
 
   //======| get the pnl in a single rotation in draco |======//
   //======| get the pnl in a single rotation in pesos |======//
-  var market_wemix = parseFloat(document.getElementById('market_wemix').value);
   if (market_draco == 0 || market_draco == "") {
     var pnl_single_draco = 0;
     var pnl_single_pesos = 0.00;
