@@ -84,6 +84,7 @@ function callAll() {
     var rotations = Math.floor(rotations);
   }
   console.log('rotations= '.concat(rotations));
+  document.getElementById('rotations').value = rotations.toFixed(0);
 
   //======| get the pnl in a maxed rotation in wemix creds|======//
   if (sales == 0 || cost_sales == 0) {
