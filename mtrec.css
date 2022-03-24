@@ -46,7 +46,8 @@ table {
 }
 
 th,
-td {
+td,
+label {
   text-align: left;
   width: 50%;
 }
@@ -94,3 +95,7 @@ h1 {
 .calculate {
   height: 50px;
 }
+
+/* label {
+  display: none;
+} */
