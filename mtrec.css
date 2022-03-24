@@ -46,7 +46,8 @@ table {
 }
 
 th,
-td {
+td,
+label {
   text-align: left;
   width: 50%;
 }
